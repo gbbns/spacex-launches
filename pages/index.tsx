@@ -34,12 +34,16 @@ export default function Home() {
 
         <div className={styles.grid}>
           {data &&
-            data.slice(0, 10).map((launchData, index) => (
-              <div key={index} className="card-small">
-                <h2>{launchData.name}</h2>
-                <p>Date: {launchData.date_utc}</p>
-              </div>
-            ))}
+            data
+              .slice(0)
+              .reverse()
+              .slice(0, 10)
+              .map((launchData, index) => (
+                <div key={index} className="card-small">
+                  <h2>{launchData.name}</h2>
+                  <p>Date: {launchData.date_utc}</p>
+                </div>
+              ))}
         </div>
       </main>
       <footer className={styles.footer}>
