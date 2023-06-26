@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.css';
+import LaunchCard from './LaunchCard';
 
 export default function Launches(data: any) {
   return (
@@ -21,6 +22,7 @@ export default function Launches(data: any) {
                 </p>
               </div>
             ))}
+        <LaunchCard />
       </div>
     </>
   );
