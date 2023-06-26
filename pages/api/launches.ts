@@ -24,8 +24,8 @@
 
 import useSWRInfinite from 'swr';
 
-const fetcher = async (url) => {
-  const response = await fetch(url);
+const fetcher = async (url: String) => {
+  const response = await fetch(url.toString());
   if (!response.ok) {
     throw new Error('An error occurred while fetching the data.');
   }
