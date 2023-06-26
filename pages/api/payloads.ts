@@ -12,7 +12,6 @@ const useSWRFetchPayload = (id: any) => {
   const { data, error } = useSWR(`https://api.spacexdata.com/v4/payloads/${id.payloadID}` as string, fetcher);
 
   const isLoading = !data && !error;
-  console.log(data);
   return { data, error, isLoading };
 };
 
