@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import useSWRFetch from './api/launches';
-
 export default function Home() {
   const { data, error, isLoading } = useSWRFetch();
 
@@ -41,7 +40,13 @@ export default function Home() {
               .map((launchData: any, index: number) => (
                 <div key={index} className="card-small">
                   <h2>{launchData.name}</h2>
-                  <p>Date: {launchData.date_utc}</p>
+                  <p>
+                    {new Date(launchData.date_utc).toLocaleDateString('en-GB', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric',
+                    })}
+                  </p>
                 </div>
               ))}
         </div>
