@@ -18,7 +18,8 @@ export default function Home() {
           The 10 most recent Space-X launches,{' '}
           <a href="https://api.spacexdata.com/v5/launches/" target="_blank">
             powered by their API
-          </a>
+          </a>{' '}
+          - {process.env.API_ENDPOINT}
         </p>
       </main>
 
