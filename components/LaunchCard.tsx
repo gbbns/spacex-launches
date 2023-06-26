@@ -1,5 +1,5 @@
 import { Payload } from './Payload';
-export const LaunchCard = ({ launchItem, index }) => {
+export const LaunchCard = ({ launchItem, index }: any) => {
   const {
     id,
     name,
