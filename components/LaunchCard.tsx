@@ -23,9 +23,11 @@ export const LaunchCard = ({ launchItem, index }: any) => {
             day: 'numeric',
           })}
         </p>
-        <p>{small}</p>
+        <p>
+          <img src={small} alt={name} />
+        </p>
         <p>{cores[0].core}</p>
-        <p>{<Payload payloadID={payloads[0]} />}</p>
+        {payloads && <p>{<Payload payloadID={payloads[0]} />}</p>}
 
         <p>
           {success}-{failures}

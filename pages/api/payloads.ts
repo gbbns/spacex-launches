@@ -9,7 +9,7 @@ const fetcher = async (url: String) => {
 };
 
 const useSWRFetchPayload = (id: any) => {
-  const { data, error } = useSWR(`https://api.spacexdata.com/v4/payloads/${id}` as string, fetcher);
+  const { data, error } = useSWR(`https://api.spacexdata.com/v4/payloads/${id.payloadID}` as string, fetcher);
 
   const isLoading = !data && !error;
   console.log(data);
