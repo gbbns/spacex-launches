@@ -38,7 +38,7 @@ export default function Home() {
               .slice(0)
               .reverse()
               .slice(0, 10)
-              .map((launchData, index) => (
+              .map((launchData: any, index: number) => (
                 <div key={index} className="card-small">
                   <h2>{launchData.name}</h2>
                   <p>Date: {launchData.date_utc}</p>
