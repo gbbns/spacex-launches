@@ -22,7 +22,7 @@
 //   }
 // }
 
-import useSWRInfinite from 'swr';
+import useSWR from 'swr';
 
 const fetcher = async (url: String) => {
   const response = await fetch(url.toString());
@@ -33,7 +33,7 @@ const fetcher = async (url: String) => {
 };
 
 const useSWRFetch = () => {
-  const { data, error } = useSWRInfinite('https://api.spacexdata.com/v5/launches' as string, fetcher);
+  const { data, error } = useSWR('https://api.spacexdata.com/v5/launches' as string, fetcher);
 
   const isLoading = !data && !error;
   console.log(data);
