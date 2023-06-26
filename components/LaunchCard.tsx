@@ -14,7 +14,7 @@ export const LaunchCard = ({ launchItem, index }: any) => {
   } = launchItem;
   return (
     <>
-      <div key={id} className="card-small">
+      <div key={id} className="card">
         <h2>{name}</h2>
         <p>
           {new Date(date_utc).toLocaleDateString('en-GB', {
@@ -28,7 +28,6 @@ export const LaunchCard = ({ launchItem, index }: any) => {
         </p>
         <p>{cores[0].core}</p>
         {payloads && <p>{<Payload payloadID={payloads[0]} />}</p>}
-
         <p>
           {success}-{failures}
         </p>
