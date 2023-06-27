@@ -10,5 +10,16 @@ export const LaunchStatus = ({ success, failure }: any) => {
     }
   };
 
-  return <p>Status: {launchStatus()}</p>;
+  return (
+    <>
+      <p>Status: {launchStatus()}</p>
+      {failure.length > 0 && (
+        <ul>
+          <li>Altitude failed: {failure[0].altitude || 'Info not provided'}</li>
+          <li>Reason: {failure[0].reason || 'Info not provided'}</li>
+          <li>Time into flight: {failure[0].time || 'Info not provided'}secs</li>
+        </ul>
+      )}
+    </>
+  );
 };
