@@ -17,7 +17,7 @@ export const LaunchCard = ({ launchItem, index }: any) => {
   return (
     <>
       <div key={id} className="card">
-        <h2>ID: {name}</h2>
+        <h2>ID: {name || 'Info not provided'}</h2>
         <p>
           Date:{' '}
           {new Date(date_utc).toLocaleDateString('en-GB', {
