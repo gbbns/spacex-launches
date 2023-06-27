@@ -17,7 +17,9 @@ export const LaunchPayload = (id: any) => {
 
   return (
     <>
-      <p>Payload type: {data.type}</p>
+      <p>
+        <strong>Payload type:</strong> {data.type}
+      </p>
     </>
   );
 };

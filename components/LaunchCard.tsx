@@ -21,7 +21,7 @@ export const LaunchCard = ({ launchItem, index }: any) => {
       <div key={id} className="data-wrapper__item card">
         <h2>ID: {name || 'Info not provided'}</h2>
         <p>
-          Date:{' '}
+          <strong>Date:</strong>{' '}
           {new Date(date_utc).toLocaleDateString('en-GB', {
             year: 'numeric',
             month: 'short',
@@ -38,7 +38,11 @@ export const LaunchCard = ({ launchItem, index }: any) => {
         {cores && cores.length > 0 && <LaunchCore coreID={cores[0]} />}
 
         {payloads && payloads.length > 0 && <LaunchPayload payloadID={payloads[0]} />}
-        {payloads.length === 0 && <p>Payload type: Not provided</p>}
+        {payloads.length === 0 && (
+          <p>
+            <strong>Payload type:</strong> Not provided
+          </p>
+        )}
         <LaunchStatus success={success} failure={failures} />
       </div>
     </>

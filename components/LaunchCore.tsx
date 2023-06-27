@@ -16,8 +16,12 @@ export const LaunchCore = (id: any) => {
 
   return (
     <>
-      <p>Core ID: {data.id}</p>
-      <p>Core serial: {data.serial}</p>
+      <p>
+        <strong>Core ID:</strong> {data.id}
+      </p>
+      <p>
+        <strong>Core serial:</strong> {data.serial}
+      </p>
     </>
   );
 };

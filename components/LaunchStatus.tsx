@@ -12,12 +12,20 @@ export const LaunchStatus = ({ success, failure }: any) => {
 
   return (
     <>
-      <p>Status: {launchStatus()}</p>
+      <p>
+        <strong>Status:</strong> {launchStatus()}
+      </p>
       {failure.length > 0 && (
         <ul>
-          <li>Altitude failed: {failure[0].altitude || 'Info not provided'}</li>
-          <li>Reason: {failure[0].reason || 'Info not provided'}</li>
-          <li>Time into flight: {failure[0].time || 'Info not provided'}secs</li>
+          <li>
+            <strong>Altitude failed:</strong> {failure[0].altitude || 'Info not provided'}
+          </li>
+          <li>
+            <strong>Reason:</strong> {failure[0].reason || 'Info not provided'}
+          </li>
+          <li>
+            <strong>Time into flight:</strong> {failure[0].time || 'Info not provided'}secs
+          </li>
         </ul>
       )}
     </>
