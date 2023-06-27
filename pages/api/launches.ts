@@ -34,7 +34,7 @@ const fetcher = async (url: String) => {
 
 const useSWRFetch = () => {
   const { data, error } = useSWR('https://api.spacexdata.com/v5/launches' as string, fetcher);
-
+console.log(data);
   const isLoading = !data && !error;
   return { data, error, isLoading };
 };
