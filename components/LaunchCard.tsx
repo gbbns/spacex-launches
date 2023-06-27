@@ -35,7 +35,8 @@ export const LaunchCard = ({ launchItem, index }: any) => {
           </p>
         )}
 
-        <p>Core ID: {cores[0].core}</p>
+        {cores && cores.length > 0 && <LaunchCore coreID={cores[0]} />}
+
         {payloads && payloads.length > 0 && <LaunchPayload payloadID={payloads[0]} />}
         {payloads.length === 0 && <p>Payload type: Not provided</p>}
         <LaunchStatus success={success} failure={failures} />
