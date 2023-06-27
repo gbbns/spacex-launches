@@ -155,14 +155,6 @@ p {
     margin: 0 0 $base-spacing * 1.5 0;
     margin-bottom: 1rem;
 
-    &:first-of-type {
-        color: map-get(map-get($palette, copy), light);
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin-top: 0;
-        margin-bottom: $base-spacing * 2;
-    }
-
     &:last-of-type {
         margin-bottom: 0;
 
