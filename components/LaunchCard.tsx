@@ -1,5 +1,6 @@
 import { Payload } from './Payload';
 import { LaunchStatus } from './LaunchStatus';
+import { LaunchPatch } from './LaunchPatch';
 
 export const LaunchCard = ({ launchItem, index }: any) => {
   const {
@@ -27,12 +28,11 @@ export const LaunchCard = ({ launchItem, index }: any) => {
           })}
         </p>
 
-        {small && small.length > 0 && (
+        {small && (
           <p>
-            <img src={small} alt={name} />
+            <LaunchPatch image={small} altText={name} />
           </p>
         )}
-        {small === null && <p>No image data provided</p>}
 
         <p>Core ID: {cores[0].core}</p>
         {payloads && payloads.length > 0 && <Payload payloadID={payloads[0]} />}
