@@ -58,10 +58,17 @@
   background: $palette-plain;
   border: 2px solid $palette-mid--light;
   border-radius: $base-border-radius;
-  flex: 1 1 calc(33% - $base-spacing * 2);
+  flex: 1 1 calc(25% - $base-spacing);
   flex-direction: column;
-  justify-content: flex-start;
-  margin-right: $base-spacing * 2;
-  margin-top: $base-spacing * 2;
+  margin-right: $base-spacing;
+  margin-top: $base-spacing;
   padding: $base-spacing * 2;
+
+  @media (min-width: 40em) {
+    flex:0 1 calc(33% - $base-spacing * 2);
+    justify-content: flex-start;
+    margin-right: $base-spacing * 2;
+    margin-top: $base-spacing * 2;
+    width: auto;
+  }
 }
