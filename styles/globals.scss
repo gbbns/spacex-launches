@@ -71,4 +71,10 @@
     margin-top: $base-spacing * 2;
     width: auto;
   }
+
+  &__patch {
+    display: block;
+    height: 100%;
+    width: 50%;
+  }
 }
