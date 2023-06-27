@@ -15,8 +15,9 @@ export const LaunchCard = ({ launchItem, index }: any) => {
   return (
     <>
       <div key={id} className="card">
-        <h2>{name}</h2>
+        <h2>ID: {name}</h2>
         <p>
+          Date:{' '}
           {new Date(date_utc).toLocaleDateString('en-GB', {
             year: 'numeric',
             month: 'short',
@@ -26,8 +27,9 @@ export const LaunchCard = ({ launchItem, index }: any) => {
         <p>
           <img src={small} alt={name} />
         </p>
-        <p>{cores[0].core}</p>
-        {payloads && <p>{<Payload payloadID={payloads[0]} />}</p>}
+        <p>Core ID: {cores[0].core}</p>
+        {payloads && payloads.length > 0 && <p>{<Payload payloadID={payloads[0]} />}</p>}
+        {payloads.length === 0 && <p>Payload type: Not provided</p>}
         <p>
           {success}-{failures}
         </p>

@@ -1,6 +1,10 @@
 import useSWRFetchPayload from '../pages/api/payloads';
 
 export const Payload = (id: any) => {
+  if (id === '') {
+    return <p>No payload type found</p>;
+  }
+
   const { data, error, isLoading } = useSWRFetchPayload(id);
 
   if (isLoading) {
@@ -13,7 +17,7 @@ export const Payload = (id: any) => {
 
   return (
     <>
-      <p>Type: {data.type}</p>
+      <p>Payload type: {data.type}</p>
     </>
   );
 };
