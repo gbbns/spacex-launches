@@ -4,7 +4,7 @@ export const LaunchPatch = ({ image, altText }: any) => {
   }
   return (
     <>
-      <img src={image} alt={altText} className="card__patch" />
+      <img src={image} alt={`Mission patch for: ${altText}`} className="card__patch" />
     </>
   );
 };
