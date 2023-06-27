@@ -1,6 +1,6 @@
 import useSWRFetchPayload from '../pages/api/payloads';
 
-export const Payload = (id: any) => {
+export const LaunchPayload = (id: any) => {
   if (id === '') {
     return <p>No payload type found</p>;
   }

@@ -1,6 +1,7 @@
-import { Payload } from './Payload';
+import { LaunchPayload } from './LaunchPayload';
 import { LaunchStatus } from './LaunchStatus';
 import { LaunchPatch } from './LaunchPatch';
+import { LaunchCore } from './LaunchCore';
 
 export const LaunchCard = ({ launchItem, index }: any) => {
   const {
@@ -35,7 +36,7 @@ export const LaunchCard = ({ launchItem, index }: any) => {
         )}
 
         <p>Core ID: {cores[0].core}</p>
-        {payloads && payloads.length > 0 && <Payload payloadID={payloads[0]} />}
+        {payloads && payloads.length > 0 && <LaunchPayload payloadID={payloads[0]} />}
         {payloads.length === 0 && <p>Payload type: Not provided</p>}
         <LaunchStatus success={success} failure={failures} />
       </div>
