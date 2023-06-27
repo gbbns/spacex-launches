@@ -28,7 +28,7 @@ export const LaunchCard = ({ launchItem, index }: any) => {
           <img src={small} alt={name} />
         </p>
         <p>Core ID: {cores[0].core}</p>
-        {payloads && payloads.length > 0 && <p>{<Payload payloadID={payloads[0]} />}</p>}
+        {payloads && payloads.length > 0 && <Payload payloadID={payloads[0]} />}
         {payloads.length === 0 && <p>Payload type: Not provided</p>}
         <p>
           {success}-{failures}
