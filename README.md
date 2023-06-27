@@ -40,10 +40,10 @@ Here is a live URL on [Vercel](vercel.com) that I added as part of the process [
 
 - Tests: 100% there would be before anything would go near to a prod environment. Tests for the two (likely more for final verson) current API routes are needed, all components need a test to ensure integrity and no extra markup is being output. With a limited user journey e2e tests would seem overkill at present.
 - Typing: Given time I put `any` on most of the typing to get things working. In prod world there would be a `types` dir where all expect data interfaces would be held, these could then be used in data retrival.
-- Markup/Styling: Default `nextjs` styling applied, real world would obviously use brand styles/design system - this would likely dictate markup too if using a DS.
 - Better defensive coding: Aware that empty elements (looking at you `<p></p>`) are output due to lack of check on data integrity, real work would have more resiliant checks (see type definition point) to ensure that there is _always_ something output, either the right data, or a graceful error message
 - Upgrade FS to full nextjs v13 recommendations: Looking at server components due to the lack of data changing would probably be a big win
-- Better FE: A more considered approach for a11y and mobile/responsive, though it using a DS, most of these issues would be mitigated
+- Better FE: ~A more considered approach for a11y and mobile/responsive, though it using a DS, most of these issues would be mitigated~ I decided to improve the overall UI experience, mobile first/responsive designs using flexbox for the launch items.
+- Markup/Styling: ~Default `nextjs` styling applied, real world would obviously use brand styles/design system - this would likely dictate markup too if using a DS.~ Made some visual changes to allow for easier reading of information, along the way I improved the base styles via sass, also tweaked the components to present a better UI.
 
 ### Enhancements
 
