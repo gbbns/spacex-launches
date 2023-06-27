@@ -4,9 +4,9 @@ export const LaunchStatus = ({ success, failure }: any) => {
       case null:
         return 'Launch status not provided';
       case true:
-        return 'Success';
+        return 'Success 🚀';
       case false:
-        return 'Failure';
+        return 'Failure 🚨';
     }
   };
 
