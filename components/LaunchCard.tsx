@@ -18,7 +18,7 @@ export const LaunchCard = ({ launchItem, index }: any) => {
   } = launchItem;
   return (
     <>
-      <div key={id} className="card">
+      <div key={id} className="data-wrapper__item card">
         <h2>ID: {name || 'Info not provided'}</h2>
         <p>
           Date:{' '}

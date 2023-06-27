@@ -1,0 +1,67 @@
+@import './styles/variables.scss';
+@import './styles/normalise.scss';
+@import './styles/base';
+
+.data-wrapper {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: 40em) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    list-style: none;
+    margin-bottom: $base-spacing;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    @media (min-width: 40em) {
+      flex: 1 1 calc(25% - $base-spacing);
+      width: auto;
+    }
+  }
+
+  &__link:hover {
+    box-shadow: 0 0px $base-spacing * 1.5 2px $palette-black
+  }
+
+  p {
+    word-break: break-word;
+  }
+}
+
+.content__wrapper {
+  padding: 2rem;
+  width: 100%;
+
+  @media (min-width: 40em) {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &-form {
+    align-items: flex-end;
+  }
+
+  &.card{
+    flex-direction: column;
+  }
+}
+
+.card {
+  background: $palette-plain;
+  border: 2px solid $palette-mid--light;
+  border-radius: $base-border-radius;
+  flex: 1 1 calc(33% - $base-spacing * 2);
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: $base-spacing * 2;
+  margin-top: $base-spacing * 2;
+  padding: $base-spacing * 2;
+}
