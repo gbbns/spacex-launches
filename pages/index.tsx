@@ -26,13 +26,14 @@ export default function Home() {
         <h1 className={styles.title}>Space-X launches</h1>
 
         <p className={styles.description}>
-          The 10 most recent Space-X launches,{' '}
+          The first 10 Space-X launches,{' '}
           <a href="https://api.spacexdata.com/v5/launches/" target="_blank">
             powered by their API
           </a>{' '}
           - {process.env.API_ENDPOINT}
+          <br />
+          <small>(I changed to the 1st 10 launches as it gave a better data set to showcase)</small>
         </p>
-
         <Launches data={data} />
       </main>
       <footer className={styles.footer}>

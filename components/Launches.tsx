@@ -7,8 +7,6 @@ export default function Launches(data: any) {
       <section className={styles.grid}>
         {data &&
           data.data
-            .slice(0)
-            .reverse()
             .slice(0, 10)
             .map((launchData: any, index: number) => <LaunchCard launchItem={launchData} index={index} />)}
       </section>
